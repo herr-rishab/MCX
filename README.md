@@ -59,11 +59,11 @@ Aegis connects these two stages by linking accessibility test results with monit
 ## ⚙️ Tech Stack
 
 - **CI/CD:** GitHub Actions / Jenkins  
-- **Accessibility Testing:** Lighthouse / axe-core  
-- **Monitoring:** Prometheus / Nagios (mocked)  
-- **Backend:** Node.js / Python  
+- **Accessibility Testing:** Lighthouse
+- **Monitoring:** Prometheus
+- **Backend:** Node.js  
 - **Alerting:** Console / Slack / Email  
-- **Storage:** JSON / SQLite  
+- **Storage:** JSON
 
 ---
 
@@ -81,14 +81,14 @@ Aegis connects these two stages by linking accessibility test results with monit
 ## Team Members
 
 - **Ayan Dafadar**  
-  - Accessibility testing integration  
-  - CI/CD pipeline configuration  
-  - Accessibility severity classification  
+	- Accessibility testing integration  
+	- CI/CD pipeline configuration  
+	- Accessibility severity classification  
 
 - **Rishab Aggarwal**  
-  - Alert ingestion  
-  - Alert correlation logic  
-  - Alert prioritization  
+	- Alert ingestion  
+	- Alert correlation logic  
+	- Alert prioritization  
 
 ---
 
