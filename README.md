@@ -1,49 +1,60 @@
-# MCX
-
-Clean, fast, and focused market intelligence for MCX—built in Flutter for mobile and web.
-
----
-
-## ✨ Highlights
-- **Daily Margin**: today + previous day, with Total, Prev Total, and Difference per contract
-- **Market Watch**: FUTCOM expiries with consecutive‑expiry LTP spreads
-- **Curated universe**: ALUMINI, COPPER, CRUDEOIL, GOLD, LEAD, NATURALGAS, NICKEL, SILVER, ZINC
-- **Web‑ready UI**: responsive layout, clean cards, instant filters
+# Aegis-MCX: MCX Market Intelligence Platform
+Aegis-MCX is a DevOps demonstration project using an **MCX market-intelligence web app (Flutter Web)** to show how **accessibility testing in CI/CD** can be correlated with **production monitoring alerts** to reduce alert fatigue and highlight real user-impacting issues.
 
 ---
 
-## 📱 Screens
-- Daily Margin
-- Market Watch
+## 📌 Overview
+
+In most DevOps pipelines, accessibility tests and monitoring alerts work independently. This leads to many alerts without clarity on user impact.
+
+**Aegis-MCX connects these two stages**, correlating accessibility test failures with runtime alerts to generate **single, meaningful, high-priority alerts**.
 
 ---
 
-## 🧮 Calculation logic
-- **Total** = Initial + ELM + Tender + Delivery + Add L/S + Spec L/S + Daily Vol + Annual Vol  
-- **Prev Total** = previous day’s same symbol + expiry (normalized expiry key), same formula  
-- **Difference** = Total − Prev Total
+## 🎯 Objectives
+
+- Integrate accessibility testing into CI/CD  
+- Monitor MCX API performance and reliability  
+- Correlate accessibility issues with monitoring alerts  
+- Reduce alert noise  
+- Improve user-focused reliability  
 
 ---
 
-## 🚀 Quickstart
-```bash
-flutter pub get
-flutter run
-```
+## 🧩 Key Components
 
-## 🌐 Build for web
-```bash
-flutter build web
-```
+### MCX Web App (Flutter)
+- Daily Margin (Today, Previous, Difference)
+- Market Watch with FUTCOM expiry spreads
+- Instruments: ALUMINI, COPPER, CRUDEOIL, GOLD, SILVER, etc.
+- Responsive, web-ready UI
+
+### Accessibility Testing
+- Lighthouse in CI/CD
+- Keyboard navigation, contrast, screen-reader checks
+- JSON reports with severity levels
+
+### Monitoring & Correlation
+- Prometheus (or mocked alerts)
+- Node.js alert correlation engine
+- Rule-based prioritization
 
 ---
 
+## 🔁 Workflow
 
-## 🔒 Notes
-- Data is pulled from MCX endpoints.
-- For web, a proxy may be required if CORS blocks requests.
+1. Code push triggers CI/CD  
+2. Flutter web build + accessibility tests  
+3. Results stored as JSON  
+4. App deployed  
+5. Monitoring generates alerts  
+6. Aegis correlates alerts + accessibility results  
+7. One prioritized alert is sent to the team  
 
 ---
 
-## ✅ Status
-Stable and hosted at https://datamcx.pages.dev/
+## 🧮 Margin Logic
+
+Total = Initial + ELM + Tender + Delivery
++ Add L/S + Spec L/S + Daily Vol + Annual Vol
+Difference = Total − Previous Day Total
